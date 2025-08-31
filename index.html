@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISD - Creative Web Design Company</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <link href="https://fonts.cdnfonts.com/css/devil-breeze" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/bimbo" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+  <style>
+    /* Hero Slider */
+    #hero-slider {
+      display: flex;
+      transition: transform 0.7s ease-in-out;
+      height: 100%;
+    }
+
+    /* Logo Slider */
+    .logo-slider-container {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .logo-slider {
+      display: inline-block;
+      animation: slide-logos 30s linear infinite;
+    }
+    .logo-slider:hover {
+      animation-play-state: paused;
+    }
+    .logo-item {
+      display: inline-block;
+      padding: 0 4rem;
+    }
+    .logo-item img {
+      max-height: 50px;
+      width: auto;
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: filter 0.3s, opacity 0.3s;
+    }
+    .logo-item img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    @keyframes slide-logos {
+      0%   { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Bee */
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    #container3D {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      pointer-events: none;
+    }
+
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+<!-- Nav bar code starts here -->
+<nav class="sticky top-0 left-0 w-full z-50 bg-white shadow-md">
+  <div class="flex items-center justify-between py-4 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+    
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="assets/img/logo/header-logo1.png" alt="Logo" class="w-24 h-18">
+    </div>
+
+    <!-- Who We Are Desktop Menu -->
+    <ul class="hidden md:flex items-center space-x-8 text-gray-600 font-medium">
+      <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
+      <!-- <li><a href="about.html" class="hover:text-orange-400">About</a></li> -->
+
+  <!-- Who We Are Dropdown -->
+  <li class="relative">
+    <button type="button" id="whoDropdownBtn" class="flex items-center text-gray-700 hover:text-orange-400 px-2 py-1 focus:outline-none">
+      Who We Are <i class="fa-solid fa-angle-down ml-1"></i>
+    </button>
+    <ul id="whoDropdownMenu" class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg z-50 hidden">
+      <li>
+        <a href="about.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">About Us</a>
+      </li>
+      <li>
+        <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Our Team</a>
+      </li>
+    </ul>
+  </li>
+
+      <!-- Service Dropdown Menu -->
+      <li class="relative">
+        <button type="button" id="serviceDropdownBtn" class="flex items-center text-gray-700 hover:text-orange-400 px-2 py-1 focus:outline-none">
+          Service <i class="fa-solid fa-angle-down ml-1"></i>
+        </button>
+        <ul id="serviceDropdownMenu" class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg z-50 hidden">
+          <li>
+            <a href="service.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Service</a>
+          </li>
+          <li>
+            <a href="service-details.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Service Details</a>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href="index.html" class="hover:text-orange-400">Price</a></li>
+
+      <!-- Blog Dropdown Menu -->
+      <li class="relative">
+      <button type="button" id="blogDropdownBtn" class="flex items-center text-gray-700 hover:text-orange-400 px-2 py-1 focus:outline-none">
+      Blog <i class="fa-solid fa-angle-down ml-1"></i>
+      </button>
+      <ul id="blogDropdownMenu" class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg z-50 hidden">
+      <li>
+      <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Blog</a>
+      </li>
+      <li>
+      <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Blog Details</a>
+      </li>
+      </ul>
+      </li>
+
+       <!-- Project Dropdown Menu -->
+      <li class="relative">
+      <button type="button" id="projectDropdownBtn" class="flex items-center text-gray-700 hover:text-orange-400 px-2 py-1 focus:outline-none">
+      Project <i class="fa-solid fa-angle-down ml-1"></i>
+      </button>
+      <ul id="projectDropdownMenu" class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg z-50 hidden">
+      <li>
+      <a href="project.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Project</a>
+      </li>
+      <li>
+      <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Project Details</a>
+      </li>
+      </ul>
+      </li>
+    </ul>
+
+    <!-- Right Side: Toggle + Button -->
+    <div class="flex items-center space-x-4">
+      
+      <!-- Toggle -->
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input id="beeToggle" type="checkbox" value="" class="sr-only peer" checked>
+        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none 
+                    peer-focus:ring-2 peer-focus:ring-orange-300 
+                    rounded-full peer 
+                    peer-checked:after:translate-x-full 
+                    peer-checked:after:border-white 
+                    after:content-[''] after:absolute after:top-[2px] after:left-[2px] 
+                    after:bg-white after:border-gray-300 after:border 
+                    after:rounded-full after:h-5 after:w-5 after:transition-all 
+                    peer-checked:bg-orange-400">
+        </div>
+      </label>
+
+      <!-- Desktop Button -->
+      <!-- <button class="hidden md:block bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-700">
+        Get Started <span class="text-white"><i class="fa-solid fa-arrow-right -rotate-[45deg]"></i></span>
+      </button> -->
+
+      <button class="relative overflow-hidden hidden md:inline-flex items-center px-4 py-2 rounded-lg shadow bg-orange-500 text-white group">
+      <span class="relative z-10 flex items-center gap-2">
+      Get A Quote
+      <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+      </span>
+      <!-- Black overlay expanding from middle -->
+      <span class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+      </button>
+
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-gray-800 focus:outline-none text-2xl">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <ul id="mobileMenu" class="md:hidden hidden flex-col space-y-4 bg-white px-6 pb-4">
+    <li><a href="index.html" class="block text-gray-600 hover:text-orange-400">Home</a></li>
+    <!-- <li><a href="about.html" class="block text-gray-600 hover:text-orange-400">About</a></li> -->
+
+    <!-- Who We Are Dropdown -->
+    <li class="relative group">
+      <a href="#" class="flex items-center gap-1 px-2 py-2 text-gray-700 hover:text-orange-400">
+        Who We Are <i class="fa-solid fa-angle-down ml-1"></i>
+      </a>
+      <ul class="absolute left-0 mt-2 w-44 bg-white rounded-lg shadow-lg z-50 hidden group-hover:block">
+        <li><a href="about.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">About</a></li>
+        <li><a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Our Team</a></li>
+      </ul>
+    </li>
+
+    <!-- Service Dropdown -->
+    <li class="relative group">
+      <a href="#" class="flex items-center gap-1 px-2 py-2 text-gray-700 hover:text-orange-400">
+        Service <i class="fa-solid fa-angle-down ml-1"></i>
+      </a>
+      <ul class="absolute left-0 mt-2 w-44 bg-white rounded-lg shadow-lg z-50 hidden group-hover:block">
+        <li><a href="service.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Service</a></li>
+        <li><a href="service-details.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Service Details</a></li>
+      </ul>
+    </li>
+
+
+    <li><a href="index.html" class="block text-gray-600 hover:text-orange-400">Price</a></li>
+   
+
+    <!-- Blog Dropdown -->
+    <li class="relative group">
+      <a href="#" class="flex items-center gap-1 px-2 py-2 text-gray-700 hover:text-orange-400">
+        Blog <i class="fa-solid fa-angle-down ml-1"></i>
+      </a>
+      <ul class="absolute left-0 mt-2 w-44 bg-white rounded-lg shadow-lg z-50 hidden group-hover:block">
+        <li><a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Blog</a></li>
+        <li><a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Blog Details</a></li>
+      </ul>
+    </li>
+
+
+    <!-- Project Dropdown -->
+    <li class="relative group">
+      <a href="#" class="flex items-center gap-1 px-2 py-2 text-gray-700 hover:text-orange-400">
+        Project <i class="fa-solid fa-angle-down ml-1"></i>
+      </a>
+      <ul class="absolute left-0 mt-2 w-44 bg-white rounded-lg shadow-lg z-50 hidden group-hover:block">
+        <li><a href="project.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Project</a></li>
+        <li><a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Project Details</a></li>
+      </ul>
+    </li>
+    
+   
+    <!-- Mobile Button -->
+    <!-- <li>
+      <button class="w-full bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-700">Get Started</button>
+    </li> -->
+    <li> <button class="relative w-full overflow-hidden bg-orange-500 text-white px-4 py-2 rounded-lg shadow font-semibold transition group">
+    
+    <!-- Text above overlay -->
+    <span class="relative z-10 flex items-center justify-center gap-2 transition-colors duration-500 group-hover:text-white">
+      Get A Quote
+      <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+    </span>
+
+    <!-- Expanding black overlay from middle -->
+    <span class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+  </button>
+</li>
+
+  </ul>
+</nav>
+
+
+<!-- ========== Hero Slider Section ========== -->
+<!-- <section class="relative w-full min-h-[500px] md:h-[590px] overflow-hidden bg-white mt-20"> -->
+<section class="relative w-full min-h-[500px] md:h-[590px] overflow-hidden bg-white">
+
+  <!-- Slider Container -->
+  <div id="hero-slider" class="flex transition-transform duration-700 ease-in-out h-full">
+
+    <!-- Slide 1: WEB DEVELOPMENT -->
+    <div class="min-w-full flex flex-col md:flex-row items-center justify-center gap-16 md:[gap:20rem] p-4 md:p-8 h-full">
+      <!-- Image for this slide -->
+      <img src="assets/img/hero/web-development.png"
+           alt="Web Development"
+           class="w-full max-w-sm md:max-w-[480px] h-auto rounded-xl">
+      
+      <!-- Content for this slide -->
+      <div class="max-w-md text-center md:text-left mt-6 md:mt-0">
+        <span class="bg-orange-100 text-orange-600 px-3 py-1 text-sm rounded-md font-semibold">Building the Web, Powering Your Vision</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-6 text-gray-900">WEB DEVELOPMENT</h2>
+        <p class="mt-6 text-gray-600">Our web developers are like computer that performs all the functions of a website. Web Developer profile is that of a technician or engineer can analyze customer needs recorded earlier in specifications by the project manager. It recommends and implements a technical solution to design customized sites or adapt existing technical solutions.</p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 mt-8 items-center justify-center md:justify-start">
+
+          <a href="#" class="relative overflow-hidden w-full sm:w-auto text-center bg-orange-500 text-white px-5 py-3 rounded-lg font-semibold transition flex items-center justify-center gap-2 group">
+          
+          <!-- Text stays above the effect -->
+          <span class="relative z-10 flex items-center gap-2">
+            Start Your Search
+            <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+          </span>
+
+          <!-- Expanding black overlay from middle -->
+          <span class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+        </a>    
+
+          <a href="#" class="relative overflow-hidden w-full sm:w-auto text-center border border-gray-400 px-5 py-3 rounded-lg font-semibold transition flex items-center justify-center gap-2 group text-black">
+  
+          <!-- Text above effect -->
+          <span class="relative z-10 flex items-center gap-2 transition-colors duration-500 group-hover:text-white">
+            Discover More
+            <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+          </span>
+
+          <!-- Expanding black overlay from middle -->
+          <span class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+        </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: APP DEVELOPMENT (Layout Flipped) -->
+    <div class="min-w-full flex flex-col md:flex-row-reverse items-center justify-center gap-16 md:[gap:20rem] p-4 md:p-8 h-full">
+      <!-- Image -->
+      <img src="assets/img/hero/app-development.png" 
+           alt="App Development" 
+           class="w-full max-w-sm md:max-w-[480px] h-auto rounded-xl">
+      
+      <!-- Text Content -->
+      <div class="max-w-md text-center md:text-left mt-6 md:mt-0">
+        <span class="bg-orange-100 text-orange-600 px-3 py-1 text-sm rounded-md font-semibold">Designs That Inspire, Code That Works</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-6 text-gray-900">APP DEVELOPMENT</h2>
+        <p class="mt-6 text-gray-600">If you need an app for your business, we are here to make things ready for you. So we are able to create apps that are well designed and user-friendly. We are working in latest technologies of mobile apps development like flutter which is good for both android and IOS</p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 mt-8 items-center justify-center md:justify-start">
+         
+           <a href="#" class="relative overflow-hidden w-full sm:w-auto text-center bg-orange-500 text-white px-5 py-3 rounded-lg font-semibold transition flex items-center justify-center gap-2 group">
+          
+          <!-- Text stays above the effect -->
+          <span class="relative z-10 flex items-center gap-2">
+            Start Your Search
+            <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+          </span>
+
+          <!-- Expanding black overlay from middle -->
+          <span class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+        </a>    
+
+           <a href="#" class="relative overflow-hidden w-full sm:w-auto text-center border border-gray-400 px-5 py-3 rounded-lg font-semibold transition flex items-center justify-center gap-2 group text-black">
+  
+          <!-- Text above effect -->
+          <span class="relative z-10 flex items-center gap-2 transition-colors duration-500 group-hover:text-white">
+            Discover More
+            <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+          </span>
+
+          <!-- Expanding black overlay from middle -->
+          <span class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+        </a>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: SOFTWARE DEVELOPMENT -->
+    <div class="min-w-full flex flex-col md:flex-row items-center justify-center gap-16 md:[gap:20rem] p-4 md:p-8 h-full">
+      <!-- Image for this slide -->
+      <img src="assets/img/hero/software-development.png" 
+           alt="Software Development" 
+           class="w-full max-w-sm md:max-w-[480px] h-auto rounded-xl">
+      
+      <!-- Content for this slide -->
+      <div class="max-w-md text-center md:text-left mt-6 md:mt-0">
+        <span class="bg-orange-100 text-orange-600 px-3 py-1 text-sm rounded-md font-semibold">Boost Your Business with Custom Solutions</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-6 text-gray-900">SOFTWARE DEVELOPMENT</h2>
+        <p class="mt-6 text-gray-600">At ISD we transform your business needs into world class software solutions by leveraging the perfect tools and techniques with agility. From strategy to implementation to quality assurance to post production we support your entire journey</p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 mt-8 items-center justify-center md:justify-start">
+       
+        <a href="#" class="relative overflow-hidden w-full sm:w-auto text-center bg-orange-500 text-white px-5 py-3 rounded-lg font-semibold transition flex items-center justify-center gap-2 group">
+          
+          <!-- Text stays above the effect -->
+          <span class="relative z-10 flex items-center gap-2">
+            Start Your Search
+            <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+          </span>
+
+          <!-- Expanding black overlay from middle -->
+          <span class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+        </a> 
+   
+           <a href="#" class="relative overflow-hidden w-full sm:w-auto text-center border border-gray-400 px-5 py-3 rounded-lg font-semibold transition flex items-center justify-center gap-2 group text-black">
+  
+          <!-- Text above effect -->
+          <span class="relative z-10 flex items-center gap-2 transition-colors duration-500 group-hover:text-white">
+            Discover More
+            <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+          </span>
+
+          <!-- Expanding black overlay from middle -->
+          <span class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+        </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation Dots -->
+  <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    <span class="dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer transition"></span>
+    <span class="dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer transition"></span>
+    <span class="dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer transition"></span>
+  </div>
+</section>
+
+
+<!-- ========== Logo Slider Section ========== -->
+<!-- <section class="py-12 bg-[#081120]">
+  <div class="ml-24 md:ml-32 mr-24 md:mr-32">
+    <h2 class="text-center text-2xl md:text-3xl font-bold text-white mb-8">
+      Trusted by Leading Companies
+    </h2>
+
+    <div class="relative overflow-hidden">
+      <div id="logo-slider" class="flex gap-8 whitespace-nowrap will-change-transform">
+        <img src="assets/img/logo/slider-logo1.png" class="inline-block w-[115px] shrink-0" alt="Company Logo">
+        <img src="assets/img/logo/slider-logo2.png" class="inline-block w-[115px] shrink-0" alt="Company Logo">
+        <img src="assets/img/logo/slider-logo3.png" class="inline-block w-[115px] shrink-0" alt="Company Logo">
+        <img src="assets/img/logo/slider-logo4.png" class="inline-block w-[115px] shrink-0" alt="Company Logo">
+        <img src="assets/img/logo/slider-logo5.png" class="inline-block w-[115px] shrink-0" alt="Company Logo">
+        <img src="assets/img/logo/slider-logo6.png" class="inline-block w-[115px] shrink-0" alt="Company Logo">
+        <img src="assets/img/logo/slider-logo7.png" class="inline-block w-[115px] shrink-0" alt="Company Logo">
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+<!-- ========== Logo Slider Section ========== -->
+<section class="py-12 bg-[#081120]">
+  <div class="mx-4 sm:mx-6 md:ml-32 md:mr-32">
+    <div class="relative">
+      <div class="swiper logo-swiper">
+        <div class="swiper-wrapper">
+          <!-- Original 7 slides -->
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo1.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo2.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo3.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo4.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo5.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo6.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo7.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+
+          <!-- Duplicate all slides for smooth loop -->
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo1.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo2.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo3.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo4.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo5.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo6.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+          <div class="swiper-slide"><img src="assets/img/logo/slider-logo7.png" class="mx-auto w-16 sm:w-20 md:w-[115px]" alt="Logo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ========== Stats Section ========== -->
+<!-- <section class="py-6 bg-white"> -->
+<section class="py-6 lg:py-20 bg-white">
+
+  <div class="mx-4 sm:mx-6 md:ml-32 md:mr-32">
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+
+
+      <div class="flex flex-wrap justify-center lg:flex-col gap-4 lg:gap-6">
+    <!-- Stat 1 -->
+    <div class="group flex flex-col items-center justify-center text-center bg-gray-100 rounded-xl w-32 sm:w-40 md:w-36 lg:w-[9.9rem] h-40 sm:h-48 p-3 transition-all duration-300 ease-in-out transform hover:bg-orange-500 cursor-pointer">
+    <img src="assets/img/icons/choose1-icon1.png" 
+       alt="Successful Client Icon"
+       class="w-12 h-12 sm:w-14 sm:h-14 object-contain mb-2 transition-transform duration-300 group-hover:scale-x-[-1] group-hover:invert">
+       
+    <h3 class="text-xl font-extrabold text-gray-900 mb-1 transition-colors duration-300 group-hover:text-white">
+    98%
+    </h3>
+    <p class="text-sm sm:text-base text-gray-600 font-medium transition-colors duration-300 group-hover:text-white">
+    Successful Client
+    </p>
+  </div>
+
+
+  <!-- Stat 2 -->
+  <div class="group flex flex-col items-center justify-center text-center bg-gray-100 rounded-xl w-32 sm:w-40 md:w-36 lg:w-[9.9rem] h-40 sm:h-48 p-3 transition-all duration-300 ease-in-out transform hover:bg-orange-500 cursor-pointer">
+    <img src="assets/img/icons/choose1-icon2.png" 
+        alt="Team Advisors Icon"
+        class="w-12 h-12 sm:w-14 sm:h-14 object-contain mb-2 transition-transform duration-300 group-hover:scale-x-[-1] group-hover:invert">
+    <h3 class="text-xl font-extrabold text-gray-900 mb-1 transition-colors duration-300 group-hover:text-white">
+      79%
+    </h3>
+    <p class="text-sm sm:text-base text-gray-600 font-medium transition-colors duration-300 group-hover:text-white">
+      Team Advisors
+    </p>
+  </div>
+
+  <!-- Stat 3 -->
+  <div class="group flex flex-col items-center justify-center text-center bg-gray-100 rounded-xl w-32 sm:w-40 md:w-36 lg:w-[9.9rem] h-40 sm:h-48 p-3 transition-all duration-300 ease-in-out transform hover:bg-orange-500 cursor-pointer">
+    <img src="assets/img/icons/choose1-icon3.png" 
+        alt="Years Experience Icon" 
+        class="w-12 h-12 sm:w-14 sm:h-14 object-contain mb-2 transition-transform duration-300 group-hover:scale-x-[-1] group-hover:invert">
+    <h3 class="text-xl font-extrabold text-gray-900 mb-1 transition-colors duration-300 group-hover:text-white">
+      12+
+    </h3>
+    <p class="text-sm sm:text-base text-gray-600 font-medium transition-colors duration-300 group-hover:text-white">
+      Years Experience
+    </p>
+  </div>
+      </div>
+
+      <!-- Main Image -->
+      <div class="w-full lg:w-1/2 mt-6 lg:mt-0 flex justify-center lg:justify-center">
+      <img src="assets/img/others/choose1-img.png" alt="Team collaborating on a project" 
+       class="w-full max-w-[500px] sm:max-w-[600px] lg:max-w-[650px] lg:max-h-[617px] object-cover rounded-xl">
+      </div>
+
+      <!-- Text Content -->
+      <div class="w-full lg:w-1/3 mt-6 lg:mt-0 flex flex-col items-center lg:items-start text-center lg:text-left">
+      <span class="bg-orange-100 text-black text-sm font-semibold tracking-wide px-3 py-1 rounded-md inline-block mb-6">
+       Why Choose Us
+      </span>
+
+  <!-- <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+    Choose Excellence<br>Elevate Your Hiring Experience
+  </h1> -->
+
+  <h1 id="animated-heading" 
+    class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-6 flex flex-wrap gap-0 overflow-hidden">
+  <span class="fade-up" style="animation-delay: 0s;">C</span>
+  <span class="fade-up" style="animation-delay: 0.1s;">h</span>
+  <span class="fade-up" style="animation-delay: 0.2s;">o</span>
+  <span class="fade-up" style="animation-delay: 0.3s;">o</span>
+  <span class="fade-up" style="animation-delay: 0.4s;">s</span>
+  <span class="fade-up" style="animation-delay: 0.5s;">e</span>
+  <span class="fade-up" style="animation-delay: 0.6s;">&nbsp;</span>
+  <span class="fade-up" style="animation-delay: 0.7s;">E</span>
+  <span class="fade-up" style="animation-delay: 0.8s;">x</span>
+  <span class="fade-up" style="animation-delay: 0.9s;">c</span>
+  <span class="fade-up" style="animation-delay: 1s;">e</span>
+  <span class="fade-up" style="animation-delay: 1.1s;">l</span>
+  <span class="fade-up" style="animation-delay: 1.2s;">l</span>
+  <span class="fade-up" style="animation-delay: 1.3s;">e</span>
+  <span class="fade-up" style="animation-delay: 1.4s;">n</span>
+  <span class="fade-up" style="animation-delay: 1.5s;">c</span>
+  <span class="fade-up" style="animation-delay: 1.6s;">e</span>
+  <span class="w-full"></span>
+  <span class="fade-up" style="animation-delay: 1.7s;">E</span>
+  <span class="fade-up" style="animation-delay: 1.8s;">l</span>
+  <span class="fade-up" style="animation-delay: 1.9s;">e</span>
+  <span class="fade-up" style="animation-delay: 2s;">v</span>
+  <span class="fade-up" style="animation-delay: 2.1s;">a</span>
+  <span class="fade-up" style="animation-delay: 2.2s;">t</span>
+  <span class="fade-up" style="animation-delay: 2.3s;">e</span>
+  <span class="fade-up" style="animation-delay: 2.4s;">&nbsp;</span>
+  <span class="fade-up" style="animation-delay: 2.5s;">Y</span>
+  <span class="fade-up" style="animation-delay: 2.6s;">o</span>
+  <span class="fade-up" style="animation-delay: 2.7s;">u</span>
+  <span class="fade-up" style="animation-delay: 2.8s;">r</span>
+  <span class="fade-up" style="animation-delay: 2.9s;">&nbsp;</span>
+  <span class="fade-up" style="animation-delay: 3s;">H</span>
+  <span class="fade-up" style="animation-delay: 3.1s;">i</span>
+  <span class="fade-up" style="animation-delay: 3.2s;">r</span>
+  <span class="fade-up" style="animation-delay: 3.3s;">i</span>
+  <span class="fade-up" style="animation-delay: 3.4s;">n</span>
+  <span class="fade-up" style="animation-delay: 3.5s;">g</span>
+  <span class="fade-up" style="animation-delay: 3.6s;">&nbsp;</span>
+  <span class="w-full"></span>
+  <span class="fade-up" style="animation-delay: 3.7s;">E</span>
+  <span class="fade-up" style="animation-delay: 3.8s;">x</span>
+  <span class="fade-up" style="animation-delay: 3.9s;">p</span>
+  <span class="fade-up" style="animation-delay: 4s;">e</span>
+  <span class="fade-up" style="animation-delay: 4.1s;">r</span>
+  <span class="fade-up" style="animation-delay: 4.2s;">i</span>
+  <span class="fade-up" style="animation-delay: 4.3s;">e</span>
+  <span class="fade-up" style="animation-delay: 4.4s;">n</span>
+  <span class="fade-up" style="animation-delay: 4.5s;">c</span>
+  <span class="fade-up" style="animation-delay: 4.6s;">e</span>
+</h1>
+
+<style>
+.fade-up {
+  display: inline-block;
+  transform: translateY(20px);
+  opacity: 0;
+}
+.fade-up.animate {
+  animation: fadeUp 0.5s forwards;
+}
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const target = document.getElementById("animated-heading");
+  const spans = target.querySelectorAll(".fade-up");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        spans.forEach(span => {
+          span.classList.add("animate");
+        });
+        observer.unobserve(target); // run once
+      }
+    });
+  }, { threshold: 0.6, rootMargin: "0px 0px -20% 0px" }); 
+
+  observer.observe(target);
+});
+</script>
+
+
+  <p class="text-gray-500 text-sm sm:text-base leading-relaxed mb-6">
+    Our team of industry experts is dedicated to understanding your unique needs and delivering tailored solutions that propel your business forward.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 mb-4 text-gray-700 font-medium text-sm">
+  
+  <div class="flex items-center gap-2">
+    <div class="bg-black rounded-full p-0.5 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
+      </svg>
+    </div>
+    Range Of Services
+  </div>
+
+  <div class="flex items-center gap-2">
+    <div class="bg-black rounded-full p-0.5 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
+      </svg>
+    </div>
+    Professional Expertise
+  </div>
+
+  <div class="flex items-center gap-2">
+    <div class="bg-black rounded-full p-0.5 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
+      </svg>
+    </div>
+    Online Resources
+  </div>
+
+  <div class="flex items-center gap-2">
+    <div class="bg-black rounded-full p-0.5 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
+      </svg>
+    </div>
+    Client Success Stories
+  </div>
+</div>
+
+  <!-- <a href="#" class="inline-block mt-4 bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition">
+    About US 
+    <span class="text-white">
+      <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+    </span>
+  </a> -->
+
+  <a href="#"
+  class="relative inline-block mt-4 overflow-hidden bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold transition group">
+  
+  <!-- Text above overlay -->
+  <span class="relative z-10 flex items-center gap-2 transition-colors duration-500 group-hover:text-white">
+    About Us
+    <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+  </span>
+
+  <!-- Expanding black overlay from middle -->
+  <span class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+</a>
+
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- ========== Services Section ========== -->
+  <section class="py-6 lg:py-20 bg-[#081120] text-white overflow-hidden">
+  <div class="mx-4 sm:mx-6 md:mx-32 text-center">
+    <!-- Section Header (Animated) -->
+    <div class="space-y-4 mb-12">
+      <span class="text-white tracking-wide px-3 py-1 bg-[#3E5879]">
+        Our Service
+      </span>
+
+      <!-- <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold transform transition-all duration-700 ease-out" style="transition-delay: 200ms;" id="service-title">
+        Tailored Solutions for Your Hiring Needs
+      </h2> -->
+
+      <!-- <h3 class="text-xl sm:text-2xl md:text-3xl font-bold transform transition-all duration-700 ease-out" style="transition-delay: 200ms;" id="service-title">
+      Tailored Solutions for Your Hiring Needs
+      </h3> -->
+
+      <h3 class="text-xl sm:text-2xl md:text-3xl font-bold flex flex-wrap justify-center gap-0 overflow-hidden text-center" id="service-title">
+      <span class="fade-up" style="animation-delay: 0s;">T</span>
+      <span class="fade-up" style="animation-delay: 0.08s;">a</span>
+      <span class="fade-up" style="animation-delay: 0.16s;">i</span>
+      <span class="fade-up" style="animation-delay: 0.24s;">l</span>
+      <span class="fade-up" style="animation-delay: 0.32s;">o</span>
+      <span class="fade-up" style="animation-delay: 0.40s;">r</span>
+      <span class="fade-up" style="animation-delay: 0.48s;">e</span>
+      <span class="fade-up" style="animation-delay: 0.56s;">d</span>
+      <span class="fade-up" style="animation-delay: 0.64s;">&nbsp;</span>
+      <span class="fade-up" style="animation-delay: 0.72s;">S</span>
+      <span class="fade-up" style="animation-delay: 0.80s;">o</span>
+      <span class="fade-up" style="animation-delay: 0.88s;">l</span>
+      <span class="fade-up" style="animation-delay: 0.96s;">u</span>
+      <span class="fade-up" style="animation-delay: 1.04s;">t</span>
+      <span class="fade-up" style="animation-delay: 1.12s;">i</span>
+      <span class="fade-up" style="animation-delay: 1.20s;">o</span>
+      <span class="fade-up" style="animation-delay: 1.28s;">n</span>
+      <span class="fade-up" style="animation-delay: 1.36s;">s</span>
+      <span class="fade-up" style="animation-delay: 1.44s;">&nbsp;</span>
+      <span class="fade-up" style="animation-delay: 1.52s;">f</span>
+      <span class="fade-up" style="animation-delay: 1.60s;">o</span>
+      <span class="fade-up" style="animation-delay: 1.68s;">r</span>
+      <span class="fade-up" style="animation-delay: 1.76s;">&nbsp;</span>
+      <span class="fade-up" style="animation-delay: 1.84s;">Y</span>
+      <span class="fade-up" style="animation-delay: 1.92s;">o</span>
+      <span class="fade-up" style="animation-delay: 2s;">u</span>
+      <span class="fade-up" style="animation-delay: 2.08s;">r</span>
+      <span class="fade-up" style="animation-delay: 2.16s;">&nbsp;</span>
+      <span class="fade-up" style="animation-delay: 2.24s;">H</span>
+      <span class="fade-up" style="animation-delay: 2.32s;">i</span>
+      <span class="fade-up" style="animation-delay: 2.40s;">r</span>
+      <span class="fade-up" style="animation-delay: 2.48s;">i</span>
+      <span class="fade-up" style="animation-delay: 2.56s;">n</span>
+      <span class="fade-up" style="animation-delay: 2.64s;">g</span>
+      <span class="fade-up" style="animation-delay: 2.72s;">&nbsp;</span>
+      <span class="fade-up" style="animation-delay: 2.80s;">N</span>
+      <span class="fade-up" style="animation-delay: 2.88s;">e</span>
+      <span class="fade-up" style="animation-delay: 2.96s;">e</span>
+      <span class="fade-up" style="animation-delay: 3.04s;">d</span>
+      <span class="fade-up" style="animation-delay: 3.12s;">s</span>
+</h3>
+
+<style>
+.fade-up {
+  display: inline-block;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 0.5s forwards; 
+}
+
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+</style>
+
+
+      <p class="text-gray-400 max-w-2xl mx-auto transform transition-all duration-700 ease-out" style="transition-delay: 400ms;" id="service-description">
+        With our proven track record and commitment to excellence, we’re here to support your organization’s growth and help you achieve your hiring goals.
+      </p>
+    </div>
+
+    <!-- Service Cards Container (Animated) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-center" id="service-cards-container">
+      <div class="rounded-3xl shadow-xl overflow-hidden transform transition-all duration-700 ease-out" style="transition-delay: 600ms;">
+        <img src="assets/img/service/service1-img1.png" alt="A team of professionals collaborating" class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105">
+      </div>
+
+      <div class="relative rounded-3xl shadow-xl overflow-hidden transform transition-all duration-700 ease-out" style="transition-delay: 800ms;">
+        <img src="assets/img/service/service1-img2.png" alt="HR professionals discussing a strategy" class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105">
+        <div class="absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col items-center justify-center p-6 sm:p-8 text-center transition-all duration-300 transform translate-y-full opacity-0 hover:translate-y-0 hover:opacity-100">
+          <img src="https://placehold.co/60x60/F56500/FFFFFF?text=%F0%9F%A7%90" alt="HR Icon" class="w-12 h-12 sm:w-16 sm:h-16 object-contain mb-4">
+          <h3 class="text-lg sm:text-xl font-bold mb-2">HR Consulting &amp; Staffing</h3>
+          <p class="text-gray-300 text-sm sm:text-base">Whether you're looking for temporary staffing, direct hire placements...</p>
+        </div>
+      </div>
+
+      <div class="rounded-3xl shadow-xl overflow-hidden transform transition-all duration-700 ease-out" style="transition-delay: 1000ms;">
+        <img src="assets/img/service/service1-img3.png" alt="Recruitment team at work" class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105">
+      </div>
+    </div>
+
+    <!-- <a href="#" class="inline-block mt-8 bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition">
+      Let's Get Started 
+      <span class="text-white">
+        <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+      </span>
+    </a> -->
+
+    <a href="#"
+    class="relative inline-block mt-8 overflow-hidden bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold transition group">
+    <!-- Text above overlay -->
+    <span class="relative z-10 flex items-center gap-2 transition-colors duration-500 group-hover:text-white">
+      Let's Get Started
+      <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+    </span>
+
+    <!-- Expanding black overlay from middle -->
+    <span class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+  </a>
+
+  </div>
+</section>
+
+
+  <!-- ========== Projects Section ========== -->
+  <section class="py-6 lg:py-20 bg-gray-50 text-gray-900">
+  <div class="mx-4 sm:mx-6 md:mx-32">
+    <!-- Section Header -->
+    <div class="text-center mb-12 max-w-2xl mx-auto">
+      <span class="text-black bg-orange-100 tracking-wide px-3 py-1 inline-block">Our Project</span>
+
+      <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 leading-tight mt-4 pb-4 flex flex-wrap justify-center gap-0 text-center">
+      <span class="fade-up" style="animation-delay: 0s;">S</span>
+      <span class="fade-up" style="animation-delay: 0.1s;">u</span>
+      <span class="fade-up" style="animation-delay: 0.2s;">c</span>
+      <span class="fade-up" style="animation-delay: 0.3s;">c</span>
+      <span class="fade-up" style="animation-delay: 0.4s;">e</span>
+      <span class="fade-up" style="animation-delay: 0.5s;">s</span>
+      <span class="fade-up" style="animation-delay: 0.6s;">s</span>
+      <span class="fade-up" style="animation-delay: 0.7s;">e</span>
+      <span class="fade-up" style="animation-delay: 0.8s;">s</span>
+      <span class="fade-up" style="animation-delay: 0.9s;">&nbsp;</span>
+      <span class="fade-up" style="animation-delay: 1s;">A</span>
+      <span class="fade-up" style="animation-delay: 1.1s;">&nbsp;</span>
+      <span class="fade-up" style="animation-delay: 1.2s;">L</span>
+      <span class="fade-up" style="animation-delay: 1.3s;">o</span>
+      <span class="fade-up" style="animation-delay: 1.4s;">o</span>
+      <span class="fade-up" style="animation-delay: 1.5s;">k</span>
+      <span class="fade-up" style="animation-delay: 1.6s;">&nbsp;</span>
+      <span class="fade-up" style="animation-delay: 1.7s;">a</span>
+      <span class="fade-up" style="animation-delay: 1.8s;">t</span>
+      <span class="fade-up" style="animation-delay: 1.9s;">&nbsp;</span>
+      <span class="fade-up" style="animation-delay: 2s;">O</span>
+      <span class="fade-up" style="animation-delay: 2.1s;">u</span>
+      <span class="fade-up" style="animation-delay: 2.2s;">r</span>
+      <span class="fade-up" style="animation-delay: 2.3s;">&nbsp;</span>
+      <span class="fade-up" style="animation-delay: 2.4s;">P</span>
+      <span class="fade-up" style="animation-delay: 2.5s;">r</span>
+      <span class="fade-up" style="animation-delay: 2.6s;">o</span>
+      <span class="fade-up" style="animation-delay: 2.7s;">j</span>
+      <span class="fade-up" style="animation-delay: 2.8s;">e</span>
+      <span class="fade-up" style="animation-delay: 2.9s;">c</span>
+      <span class="fade-up" style="animation-delay: 3s;">t</span>
+      <span class="fade-up" style="animation-delay: 3.1s;">s</span>
+</h3>
+
+<style>
+.fade-up {
+  display: inline-block;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 0.8s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+</style>
+
+
+      <p class="mt-4 text-gray-600 text-sm sm:text-base">
+        Explore our portfolio of successful projects that showcase the impact we've made in connecting top talent with leading organizations. From small-scale placements.
+      </p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="flex flex-col md:flex-row gap-4 md:gap-6 justify-center project-grid">
+
+      <!-- Project Card 1 -->
+      <div class="project-card relative flex-1 overflow-hidden rounded-2xl shadow-xl transition-all duration-500 ease-in-out cursor-pointer group">
+        <div class="overflow-hidden h-[450px]">
+          <img src="assets/img/project/project1-img1.png" alt="A business meeting in progress"
+            class="w-full h-full object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-105">
+        </div>
+        <!-- Hover content -->
+        <div class="absolute left-[10%] bottom-[-100%] w-[80%] bg-orange-500 text-white p-4 transition-all duration-500 ease-in-out group-hover:bottom-5">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <p class="text-sm">Staffing Service</p>
+              <h4 class="font-bold text-lg">
+                <a href="/project-details">Demonstrating Our Expertise</a>
+              </h4>
+            </div>
+            <!-- Rotated circular icon -->
+            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+              <a href="/project-details" class="text-orange-500 transform -rotate-45 text-lg">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card relative flex-1 overflow-hidden rounded-2xl shadow-xl transition-all duration-500 ease-in-out cursor-pointer group">
+        <div class="overflow-hidden h-[450px]">
+          <img src="assets/img/project/project1-img2.png" alt="A team collaborating on a project"
+            class="w-full h-full object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-105">
+        </div>
+        <div class="absolute left-[10%] bottom-[-100%] w-[80%] bg-orange-500 text-white p-4 transition-all duration-500 ease-in-out group-hover:bottom-5">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <p class="text-sm">Staffing Service</p>
+              <h4 class="font-bold text-lg">
+                <a href="/project-details">Demonstrating Our Expertise</a>
+              </h4>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+              <a href="/project-details" class="text-orange-500 transform -rotate-45 text-lg">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-card relative flex-1 overflow-hidden rounded-2xl shadow-xl transition-all duration-500 ease-in-out cursor-pointer group">
+        <div class="overflow-hidden h-[450px]">
+          <img src="assets/img/project/project1-img3.png" alt="A designer working on a laptop"
+            class="w-full h-full object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-105">
+        </div>
+        <div class="absolute left-[10%] bottom-[-100%] w-[80%] bg-orange-500 text-white p-4 transition-all duration-500 ease-in-out group-hover:bottom-5">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <p class="text-sm">Staffing Service</p>
+              <h4 class="font-bold text-lg">
+                <a href="/project-details">Demonstrating Our Expertise</a>
+              </h4>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+              <a href="/project-details" class="text-orange-500 transform -rotate-45 text-lg">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+<!-- Hover Effect CSS -->
+<style>
+@media (min-width: 768px) {
+  .project-grid .project-card {
+    flex: 1;
+  }
+  .project-grid .project-card:hover {
+    flex: 1.3; /* expand hovered card */
+  }
+  .project-grid .project-card:hover ~ .project-card,
+  .project-grid .project-card:not(:hover) {
+    flex: 0.85; /* shrink others */
+  }
+}
+</style>
+
+
+
+
+  </div>
+</section>
+
+
+<!-- ========== Recruitment Section ========== -->
+<section class="py-6 lg:py-20 bg-[#f0f0f0]">
+  <div class="px-4 sm:px-6 lg:px-32">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12">
+      
+      <!-- Right Side: Text + Features (Order 1 on small screens) -->
+      <div class="w-full lg:w-1/2 order-1 lg:order-2">
+        <!-- Label -->
+        <span class="inline-block text-sm text-gray-800 bg-orange-100 tracking-wide px-3 py-1 rounded">
+          Recruitment Technologies
+        </span>
+
+        <!-- Heading -->
+        <!-- <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mt-4">
+          Solving Recruitment Using Technology
+        </h2> -->
+
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mt-4 flex flex-wrap  gap-0 text-center">
+        <span class="fade-up" style="animation-delay: 0s;">S</span>
+        <span class="fade-up" style="animation-delay: 0.08s;">o</span>
+        <span class="fade-up" style="animation-delay: 0.16s;">l</span>
+        <span class="fade-up" style="animation-delay: 0.24s;">v</span>
+        <span class="fade-up" style="animation-delay: 0.32s;">i</span>
+        <span class="fade-up" style="animation-delay: 0.40s;">n</span>
+        <span class="fade-up" style="animation-delay: 0.48s;">g</span>
+        <span class="fade-up" style="animation-delay: 0.56s;">&nbsp;</span>
+        <span class="fade-up" style="animation-delay: 0.64s;">R</span>
+        <span class="fade-up" style="animation-delay: 0.72s;">e</span>
+        <span class="fade-up" style="animation-delay: 0.80s;">c</span>
+        <span class="fade-up" style="animation-delay: 0.88s;">r</span>
+        <span class="fade-up" style="animation-delay: 0.96s;">u</span>
+        <span class="fade-up" style="animation-delay: 1.04s;">i</span>
+        <span class="fade-up" style="animation-delay: 1.12s;">t</span>
+        <span class="fade-up" style="animation-delay: 1.20s;">m</span>
+        <span class="fade-up" style="animation-delay: 1.28s;">e</span>
+        <span class="fade-up" style="animation-delay: 1.36s;">n</span>
+        <span class="fade-up" style="animation-delay: 1.44s;">t</span>
+        <span class="fade-up" style="animation-delay: 1.52s;">&nbsp;</span>
+        <span class="fade-up" style="animation-delay: 1.60s;">U</span>
+        <span class="fade-up" style="animation-delay: 1.68s;">s</span>
+        <span class="fade-up" style="animation-delay: 1.76s;">i</span>
+        <span class="fade-up" style="animation-delay: 1.84s;">n</span>
+        <span class="fade-up" style="animation-delay: 1.92s;">g</span>
+        <span class="fade-up" style="animation-delay: 2.00s;">&nbsp;</span>
+        <span class="w-full"></span> <!-- line break -->
+        <span class="fade-up" style="animation-delay: 2.08s;">T</span>
+        <span class="fade-up" style="animation-delay: 2.16s;">e</span>
+        <span class="fade-up" style="animation-delay: 2.24s;">c</span>
+        <span class="fade-up" style="animation-delay: 2.32s;">h</span>
+        <span class="fade-up" style="animation-delay: 2.40s;">n</span>
+        <span class="fade-up" style="animation-delay: 2.48s;">o</span>
+        <span class="fade-up" style="animation-delay: 2.56s;">l</span>
+        <span class="fade-up" style="animation-delay: 2.64s;">o</span>
+        <span class="fade-up" style="animation-delay: 2.72s;">g</span>
+        <span class="fade-up" style="animation-delay: 2.80s;">y</span>
+</h2>
+
+<style>
+.fade-up {
+  display: inline-block;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 0.6s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+</style>
+
+
+
+        <!-- Paragraph -->
+        <p class="mt-4 text-gray-600">
+          Whether you're seeking temporary assignments, placements, or executive-level positions, our curated solutions are designed for your success.
+        </p>
+
+        <!-- Feature List -->
+        <div class="mt-8 space-y-6">
+          <div class="space-y-6">
+            <!-- Feature 1 -->
+            <!-- <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 bg-white rounded-xl shadow-md transition-all duration-300 hover:bg-orange-500 hover:text-white group">
+              <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 p-4 group-hover:bg-white transition-colors duration-300">
+                <img src="assets/img/icons/work1-icon1.png" alt="Sourcing Icon"
+                     class="w-10 h-10 object-contain transition-all duration-300
+                     group-hover:filter group-hover:invert-0 group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-[330deg] group-hover:brightness-100 group-hover:contrast-200" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-white">Sourcing the Best</h3>
+                <p class="text-gray-600 group-hover:text-white">Stay tuned for regular updates and valuable insights from our team of staffing experts.</p>
+              </div>
+            </div> -->
+
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 bg-white rounded-xl shadow-md 
+            transition-all duration-500 transform hover:-translate-y-[10px] hover:bg-orange-500 hover:text-white group">
+            <!-- Icon Container -->
+            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 p-4 
+                        group-hover:bg-white transition-colors duration-500">
+              <img src="assets/img/icons/work1-icon1.png" alt="Sourcing Icon" 
+                  class="w-10 h-10 object-contain transition-all duration-500
+                          group-hover:filter group-hover:invert-0 group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-[330deg] group-hover:brightness-100 group-hover:contrast-200">
+            </div>
+
+            <!-- Text Content -->
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-white transition-colors duration-500">
+                Sourcing the Best
+              </h3>
+              <p class="text-gray-600 group-hover:text-white transition-colors duration-500">
+                Stay tuned for regular updates and valuable insights from our team of staffing experts.
+              </p>
+            </div>
+            </div>
+  
+            <!-- Feature 2 -->
+            <!-- <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 bg-white rounded-xl shadow-md transition-all duration-300 hover:bg-orange-500 hover:text-white group">
+              <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 p-4 group-hover:bg-white transition-colors duration-300">
+                <img src="assets/img/icons/work1-icon2.png" alt="Sourcing Icon"
+                     class="w-10 h-10 object-contain transition-all duration-300
+                     group-hover:filter group-hover:invert-0 group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-[330deg] group-hover:brightness-100 group-hover:contrast-200" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-white">Volume Hiring</h3>
+                <p class="text-gray-600 group-hover:text-white">Remember to keep your blog content informative, engaging, and relevant to your target audience.</p>
+              </div>
+            </div> -->
+
+
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 bg-white rounded-xl shadow-md 
+            transition-all duration-500 transform hover:-translate-y-[10px] hover:bg-orange-500 hover:text-white group">
+            <!-- Icon Container -->
+            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 p-4 
+                        group-hover:bg-white transition-colors duration-500">
+              <img src="assets/img/icons/work1-icon2.png" alt="Volume Hiring Icon"
+                  class="w-10 h-10 object-contain transition-all duration-500
+                          group-hover:filter group-hover:invert-0 group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-[330deg] group-hover:brightness-100 group-hover:contrast-200" />
+            </div>
+
+            <!-- Text Content -->
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-white transition-colors duration-500">
+                Volume Hiring
+              </h3>
+              <p class="text-gray-600 group-hover:text-white transition-colors duration-500">
+                Remember to keep your blog content informative, engaging, and relevant to your target audience.
+              </p>
+            </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <!-- <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 bg-white rounded-xl shadow-md transition-all duration-300 hover:bg-orange-500 hover:text-white group">
+              <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 p-4 group-hover:bg-white transition-colors duration-300">
+                <img src="assets/img/icons/work1-icon3.png" alt="Sourcing Icon"
+                     class="w-10 h-10 object-contain transition-all duration-300
+                     group-hover:filter group-hover:invert-0 group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-[330deg] group-hover:brightness-100 group-hover:contrast-200" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-white">Partners in Team Building</h3>
+                <p class="text-gray-600 group-hover:text-white">This will help drive traffic to your website &amp; establish your agency as a trusted authority.</p>
+              </div>
+            </div> -->
+
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 bg-white rounded-xl shadow-md 
+            transition-all duration-500 transform hover:-translate-y-[10px] hover:bg-orange-500 hover:text-white group">
+            <!-- Icon Container -->
+            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 p-4 
+                        group-hover:bg-white transition-colors duration-500">
+              <img src="assets/img/icons/work1-icon3.png" alt="Partners in Team Building Icon"
+                  class="w-10 h-10 object-contain transition-all duration-500
+                          group-hover:filter group-hover:invert-0 group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-[330deg] group-hover:brightness-100 group-hover:contrast-200" />
+            </div>
+
+            <!-- Text Content -->
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-white transition-colors duration-500">
+                Partners in Team Building
+              </h3>
+              <p class="text-gray-600 group-hover:text-white transition-colors duration-500">
+                This will help drive traffic to your website &amp; establish your agency as a trusted authority.
+              </p>
+            </div>
+          </div>
+          </div>
+        </div>  
+      </div>
+
+      <!-- Left Side: Main Image (Order 2 on small screens) -->
+      <div class="w-full lg:w-1/2 flex items-center order-2 lg:order-1 mt-8 lg:mt-0">
+        <img src="assets/img/work/work1-image.png" alt="Recruitment Meeting" class="w-full max-w-[95%] max-h-[650px] object-cover rounded-xl">
+      <!-- <img src="assets/img/work/work1-image.png" 
+     alt="Recruitment Meeting" 
+     class="w-full max-w-[95%] max-h-[617px] object-cover rounded-xl"> -->
+   
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+<!-- ========== Testimonial Section ========== -->
+<section class="py-6 lg:py-20 bg-gray-50">
+  <div class="px-4 sm:px-6 lg:px-32">
+    <!-- Section Header -->
+    <div class="flex flex-col lg:flex-row items-start justify-between mb-12 gap-6">
+      <div class="max-w-xl">
+        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded text-sm font-medium">Testimonial</span>
+        <!-- <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-4">
+          Real Stories, Real Results
+        </h2> -->
+
+        <!-- <h4 class="text-lg md:text-xl font-bold text-gray-900 mt-4">
+        Real Stories, Real Results
+        </h4> -->
+
+
+        <h4 id="animated-subheading" class="text-lg md:text-xl font-bold text-gray-900 mt-4 flex flex-wrap gap-0 overflow-hidden">
+        <span class="fade-up" style="animation-delay:0s;">R</span>
+        <span class="fade-up" style="animation-delay:0.1s;">e</span>
+        <span class="fade-up" style="animation-delay:0.2s;">a</span>
+        <span class="fade-up" style="animation-delay:0.3s;">l</span>
+        <span class="fade-up" style="animation-delay:0.4s;">&nbsp;</span>
+        <span class="fade-up" style="animation-delay:0.5s;">S</span>
+        <span class="fade-up" style="animation-delay:0.6s;">t</span>
+        <span class="fade-up" style="animation-delay:0.7s;">o</span>
+        <span class="fade-up" style="animation-delay:0.8s;">r</span>
+        <span class="fade-up" style="animation-delay:0.9s;">i</span>
+        <span class="fade-up" style="animation-delay:1s;">e</span>
+        <span class="fade-up" style="animation-delay:1.1s;">s</span>
+        <span class="fade-up" style="animation-delay:1.2s;">,&nbsp;</span>
+        <span class="fade-up" style="animation-delay:1.3s;">R</span>
+        <span class="fade-up" style="animation-delay:1.4s;">e</span>
+        <span class="fade-up" style="animation-delay:1.5s;">a</span>
+        <span class="fade-up" style="animation-delay:1.6s;">l</span>
+        <span class="fade-up" style="animation-delay:1.7s;">&nbsp;</span>
+        <span class="fade-up" style="animation-delay:1.8s;">R</span>
+        <span class="fade-up" style="animation-delay:1.9s;">e</span>
+        <span class="fade-up" style="animation-delay:2s;">s</span>
+        <span class="fade-up" style="animation-delay:2.1s;">u</span>
+        <span class="fade-up" style="animation-delay:2.2s;">l</span>
+        <span class="fade-up" style="animation-delay:2.3s;">t</span>
+        <span class="fade-up" style="animation-delay:2.4s;">s</span>
+        </h4>
+
+<style>
+.fade-up {
+  display: inline-block;
+  transform: translateY(20px);
+  opacity: 0;
+}
+.fade-up.animate {
+  animation: fadeUp 0.5s forwards;
+}
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const target = document.getElementById("animated-subheading");
+  const spans = target.querySelectorAll(".fade-up");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        spans.forEach(span => {
+          span.classList.add("animate");
+        });
+        observer.unobserve(target); // run once
+      }
+    });
+  }, { threshold: 0.6, rootMargin: "0px 0px -20% 0px" }); 
+
+  observer.observe(target);
+});
+</script>
+
+        <p class="mt-4 text-gray-600">
+          Discover why businesses trust us to find the right talent and candidates trust us to find the perfect fit.
+        </p>
+      </div>
+      <!-- Navigation Arrows -->
+      <div class="flex items-center gap-2 mt-4 lg:mt-0">
+        <button id="prevBtn" class="w-10 h-10 flex items-center justify-center rounded bg-orange-100 text-gray-700 hover:bg-orange-400 transition">
+          <!-- <span class="text-lg">←</span> -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+          <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" />
+        </svg>
+ 
+        </button>
+        <button id="nextBtn" class="w-10 h-10 flex items-center justify-center rounded bg-orange-100 text-gray-700 hover:bg-orange-400 transition">
+          <!-- <span class="text-lg">→</span> -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+          <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" />
+          </svg>
+ 
+        </button>
+      </div>
+    </div>
+
+    <!-- Slider Wrapper -->
+    <div class="overflow-hidden">
+      <div id="testimonialContainer" class="flex transition-transform duration-500 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-[#f5f3f4] p-6 rounded-lg shadow flex flex-col items-center md:flex-row gap-4 md:gap-6 flex-shrink-0 w-full md:w-1/2">
+          <img src="assets/img/testimonial/tes1-img1.png" alt="Amir Jamil" class="w-32 h-40 object-cover rounded-md order-1 md:order-2">
+          <div class="flex-1 text-center md:text-left order-2 md:order-1">
+
+           <div class="flex justify-center md:justify-start mb-2">
+            <ul class="flex gap-2">
+              <li class="bg-orange-100 px-2 py-1 rounded flex items-center justify-center">
+                <i class="fa-solid fa-star text-orange-500 text-base"></i>
+              </li>
+              <li class="bg-orange-100 px-2 py-1 rounded flex items-center justify-center">
+                <i class="fa-solid fa-star text-orange-500 text-base"></i>
+              </li>
+              <li class="bg-orange-100 px-2 py-1 rounded flex items-center justify-center">
+                <i class="fa-solid fa-star text-orange-500 text-base"></i>
+              </li>
+              <li class="bg-orange-100 px-2 py-1 rounded flex items-center justify-center">
+                <i class="fa-solid fa-star text-orange-500 text-base"></i>
+              </li>
+              <li class="bg-orange-100 px-2 py-1 rounded flex items-center justify-center">
+                <i class="fa-solid fa-star text-orange-500 text-base"></i>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-gray-700 mb-3 py-3">
+          “Our dedication to excellence, and commitment to building long-lasting partnerships have”
+          </p>
+
+         
+            <a href="#" class="block">
+            <h4 class="font-bold text-gray-900">Usman Khan</h4>
+            </a>
+             <p class="text-gray-500 text-sm">Co-Founder</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#f5f3f4] p-6 rounded-lg shadow flex flex-col items-center md:flex-row gap-4 md:gap-6 flex-shrink-0 w-full md:w-1/2">
+          <img src="assets/img/testimonial/tes1-img2.png" alt="Usman Khan" class="w-32 h-40 object-cover rounded-md order-1 md:order-2">
+          <div class="flex-1 text-center md:text-left order-2 md:order-1">
+          
+             <div class="flex justify-center md:justify-start mb-2">
+            <ul class="flex gap-2">
+              <li class="bg-orange-100 px-2 py-1 rounded flex items-center justify-center">
+                <i class="fa-solid fa-star text-orange-500 text-base"></i>
+              </li>
+              <li class="bg-orange-100 px-2 py-1 rounded flex items-center justify-center">
+                <i class="fa-solid fa-star text-orange-500 text-base"></i>
+              </li>
+              <li class="bg-orange-100 px-2 py-1 rounded flex items-center justify-center">
+                <i class="fa-solid fa-star text-orange-500 text-base"></i>
+              </li>
+              <li class="bg-orange-100 px-2 py-1 rounded flex items-center justify-center">
+                <i class="fa-solid fa-star text-orange-500 text-base"></i>
+              </li>
+              <li class="bg-orange-100 px-2 py-1 rounded flex items-center justify-center">
+                <i class="fa-solid fa-star text-orange-500 text-base"></i>
+              </li>
+            </ul>
+          </div>
+
+            <p class="text-gray-700 mb-3 py-3">
+            “But don't just take our word for it—hear what our satisfied clients have to say. From Fortune 500 companies to small”</p>
+
+            <a href="#" class="block">
+            <h4 class="font-bold text-gray-900">Amir Jamil</h4>
+            </a>
+            <p class="text-gray-500 text-sm">Vp, Daily News</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('testimonialContainer');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let index = 0;
+    const cards = container.children;
+
+    function getVisibleCards() {
+      if (window.innerWidth < 768) return 1; // mobile
+      if (window.innerWidth < 1024) return 2; // tablet/small desktop
+      return cards.length; // large screens
+    }
+
+    function updateSlider() {
+      const visible = getVisibleCards();
+      const cardWidth = cards[0].offsetWidth + 24; // include gap
+      container.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      const visible = getVisibleCards();
+      if (index < cards.length - visible) index++;
+      updateSlider();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (index > 0) index--;
+      updateSlider();
+    });
+
+    window.addEventListener('resize', () => {
+      // reset index if screen resized
+      if (index > cards.length - getVisibleCards()) index = cards.length - getVisibleCards();
+      if (index < 0) index = 0;
+      updateSlider();
+    });
+  </script>
+</section>
+
+
+
+<!-- ========== Call to Action ========== --> 
+<!-- <section class="py-12 border-b border-gray-700" style="background-color:#081120;">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 px-6 text-white">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold">
+        Ready to Power up your <br class="hidden md:block"> Savings and Reliability?
+      </h2>
+      <p class="mt-2">
+        Feel free to customize this paragraph to better reflect the <br /> specific services offered by your IT solution &amp; the unique
+      </p>
+    </div>
+    <form class="flex w-full md:w-auto">
+      <input type="email" placeholder="Email Address" 
+             class="px-4 py-3 w-full md:w-80 rounded-l-lg text-black focus:outline-none">
+      <button type="submit" 
+              class="bg-orange-500 hover:bg-orange-600 px-5 py-3 rounded-r-lg font-semibold">
+        Subscribe Now
+        <span class="text-white">
+          <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+        </span>
+      </button>
+      
+    </form>
+  </div>
+</section> -->
+
+<!-- Ready to Power up your Savings and Reliability? -->
+<section class="py-12 border-b border-gray-700 bg-[#081120]">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 px-2 text-white">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold">
+        Ready to Power up your <br class="hidden md:block"> Savings and Reliability?
+      </h2>
+      <p class="mt-2">
+        Feel free to customize this paragraph to better reflect the <br /> 
+        specific services offered by your IT solution &amp; the unique
+      </p>
+    </div>
+
+    <form class="flex w-full md:w-auto">
+      <input type="email" placeholder="Email Address" 
+             class="px-4 py-3 w-full md:w-80 rounded-l-lg text-black focus:outline-none">
+      <!-- <button type="submit" 
+              class="bg-orange-500 hover:bg-orange-600 px-5 py-3 rounded-r-lg font-semibold">
+        Subscribe Now
+        <span class="text-white">
+          <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+        </span>
+      </button> -->
+
+      <button type="submit"
+      class="relative overflow-hidden bg-orange-500 text-white px-5 py-3 rounded-r-lg font-semibold transition group">
+      
+      <!-- Text above overlay -->
+      <span class="relative z-10 flex items-center gap-2 transition-colors duration-500 group-hover:text-white">
+        Subscribe Now
+        <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+      </span>
+
+      <!-- Expanding black overlay from middle -->
+      <span class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+    </button>
+    </form>
+  </div>
+</section>
+
+
+ <!-- ========== Footer ========== -->
+<footer class="bg-[#081120] text-white">
+  <div class="max-w-6xl mx-auto px-2 py-10 grid md:grid-cols-4 gap-12">
+    
+    <!-- Logo + About -->
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="assets/img/logo/header-logo1.png" alt="logo" class="w-40 sm:w-54 h-auto">
+      </div>
+      <p class="mt-4 text-sm leading-relaxed text-gray-300">
+        ISD is a creative web design company in Dhaka, Bangladesh, offering top solutions in web development, branding, hosting, and IT services.
+      </p>
+
+      <!-- Social Media -->
+      <!-- <div class="flex gap-4 mt-4">
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div> -->
+
+      <div class="flex gap-2 mt-4">
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+      <div class="space-y-2">
+      <h3 class="text-lg font-bold text-white mb-4">Quick Links</h3>
+      <ul class="space-y-2 text-gray-300">
+        <li>
+          <a href="#"
+            class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3">
+            <!-- Left Accent Bar -->
+            <span class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"></span>
+            Staff Management
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3">
+            <span class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"></span>
+            Leadership Training
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3">
+            <span class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"></span>
+            Corporate Program
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3">
+            <span class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"></span>
+            Staffing Solutions
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3">
+            <span class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"></span>
+            Blog Standard
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Explore -->
+      <div class="space-y-2">
+      <h3 class="text-lg font-bold text-white mb-4">Explore</h3>
+      <ul class="space-y-2 text-gray-300">
+        <li>
+          <a href="#"
+            class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3">
+            <!-- Left Accent Bar -->
+            <span class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"></span>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3">
+            <span class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"></span>
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3">
+            <span class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"></span>
+            Service
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3">
+            <span class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"></span>
+            Testimonial
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3">
+            <span class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"></span>
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- <div class="space-y-2">
+      <h3 class="font-bold mb-4">Explore</h3>
+      <ul class="space-y-2 text-gray-300">
+        <li><a href="#" class="hover:text-orange-400 transition-colors">Home</a></li>
+        <li><a href="#" class="hover:text-orange-400 transition-colors">About Us</a></li>
+        <li><a href="#" class="hover:text-orange-400 transition-colors">Service</a></li>
+        <li><a href="#" class="hover:text-orange-400 transition-colors">Testimonial</a></li>
+        <li><a href="#" class="hover:text-orange-400 transition-colors">Contact Us</a></li>
+      </ul>
+    </div> -->
+
+    <!-- Contact -->
+    <div class="space-y-2"> 
+    <h3 class="font-bold mb-4">Contact Us</h3>
+    <ul class="space-y-3 text-gray-300">
+      
+      <li class="flex items-center gap-3 group hover:text-orange-400 transition-colors cursor-pointer">
+        <span class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-700 group-hover:bg-orange-400 transition-colors">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.54a1 1 0 01-1 1C10.61 22 2 13.39 2 3.5a1 1 0 011-1H6.5a1 1 0 011 1c0 1.25.2 2.46.57 3.59a1 1 0 01-.25 1.01l-2.2 2.2z"></path>
+          </svg> -->
+          <img src="assets/img/icons/footer-icon1.png" alt="" class="w-5 h-5">
+        </span>
+        +880 123 456 789
+      </li>
+
+    <li class="flex items-center gap-3 group hover:text-orange-400 transition-colors cursor-pointer">
+       <span class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-700 group-hover:bg-orange-400 transition-colors">
+       <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+        </svg> -->
+        <img src="assets/img/icons/footer-icon2.png" alt="" class="w-5 h-5">
+      </span> 
+      info@mail.com
+    </li>
+
+    <li class="flex items-center gap-3 group hover:text-orange-400 transition-colors cursor-pointer">
+      <span class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-700 group-hover:bg-orange-400 transition-colors">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"></path>
+        </svg> -->
+        <img src="assets/img/icons/footer-icon3.png" alt="" class="w-5 h-5">
+      </span>
+      Dhaka, Bangladesh
+    </li>
+  </ul>
+</div>
+
+
+      <!-- <div class="space-y-2">
+      <h3 class="font-bold mb-4">Contact Us</h3>
+      <ul class="space-y-3 text-gray-300">
+        <li class="flex items-center gap-2 group hover:text-orange-400 transition-colors">
+          <img src="assets/img/icons/footer-icon1.png" alt="" class="w-5 h-5">
+          +880 123 456 789
+        </li>
+        <li class="flex items-center gap-2 group hover:text-orange-400 transition-colors">
+          <img src="assets/img/icons/footer-icon2.png" alt="" class="w-5 h-5">
+          info@mail.com
+        </li>
+        <li class="flex items-center gap-2 group hover:text-orange-400 transition-colors">
+          <img src="assets/img/icons/footer-icon3.png" alt="" class="w-5 h-5">
+          Dhaka, Bangladesh
+        </li>
+      </ul>
+    </div> -->
+    
+  </div>
+
+  <!-- Bottom -->
+  <div class="border-t border-gray-700 py-4 text-center text-sm text-gray-400 px-6 lg:px-12">
+    © 2025 ISD. All Rights Reserved.
+  </div>
+</footer>
+
+
+  <!-- Back to Top Button -->
+  <!-- <button id="backToTop" 
+    class="hidden fixed bottom-6 right-6 w-12 h-12 rounded-full flex items-center justify-center shadow-lg bg-white text-blue-800">
+    
+
+    <svg class="absolute w-12 h-12 -rotate-90" viewBox="0 0 36 36">
+      <path
+        d="M18 2a16 16 0 1 1 0 32a16 16 0 1 1 0-32"
+        fill="none"
+        stroke="#e5e7eb" 
+        stroke-width="3"
+      />
+    <path
+      id="progressCircle"
+      d="M18 2a16 16 0 1 1 0 32a16 16 0 1 1 0-32"
+      fill="none"
+      stroke="#1e3a8a" 
+      stroke-width="3"
+      stroke-dasharray="100"
+      stroke-dashoffset="100"
+      stroke-linecap="round"
+    />
+  </svg>
+
+ 
+    <svg xmlns="http://www.w3.org/2000/svg" 
+       class="relative z-10 w-5 h-5 text-blue-800" 
+       fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+  </svg>
+</button> -->
+
+
+  <!-- 3D Container, the Bee -->
+  <div id="container3D"></div>
+
+  <!-- External Script -->
+  <script src="script.js" defer></script>
+
+  <!-- Bee JS (module) -->
+  <script type="module" src="bee.js"></script>
+
+</body>
+</html>

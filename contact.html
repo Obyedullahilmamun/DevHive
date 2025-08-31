@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ISD</title>
+
+     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/devil-breeze" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/bimbo" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen"> 
+    
+<!-- ========== Navbar ========== -->
+<header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+  <div class="flex items-center justify-between py-4 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+    
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="assets/img/logo/header-logo1.png" alt="Logo" class="w-20 sm:w-24 h-auto">
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex items-center space-x-6 lg:space-x-8 text-gray-600 font-medium">
+      <a href="index.html" class="hover:text-orange-400">Home</a>
+      <a href="about.html" class="hover:text-orange-400">About</a>
+
+      <!-- Desktop Dropdown -->
+      <div class="relative group">
+        <button id="serviceDropdownBtn" class="flex items-center text-gray-700 hover:text-orange-400 px-2 py-1 focus:outline-none">
+          Service <i class="fa-solid fa-angle-down ml-1"></i>
+        </button>
+        <ul id="serviceDropdownMenu" class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg hidden">
+          <li>
+            <a href="service.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Service</a>
+          </li>
+          <li>
+            <a href="service-details.html" class="block px-4 py-2 text-gray-600 hover:bg-orange-400 hover:text-white">Service Details</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="project.html" class="hover:text-orange-400">Project</a>
+      <a href="index.html" class="hover:text-orange-400">Price</a>
+      <a href="contact.html" class="hover:text-orange-400">Contact</a>
+    </nav>
+
+    <!-- Right Side: Button -->
+    <div class="flex items-center space-x-4">
+      
+      <!-- Desktop Quote / Get Started Button -->
+      
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-gray-800 focus:outline-none text-2xl">
+        ☰
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav id="mobileMenu" class="md:hidden hidden flex-col bg-white w-full shadow-lg">
+    <a href="index.html" class="block px-6 py-3 hover:text-orange-400">Home</a>
+    <a href="about.html" class="block px-6 py-3 hover:text-orange-400">About</a>
+
+    <!-- Mobile Dropdown -->
+    <div>
+      <button id="mobileServiceBtn" class="w-full text-left px-6 py-3 flex items-center justify-between hover:text-orange-400">
+        <span>Service</span> <i class="fa-solid fa-angle-down"></i>
+      </button>
+      <ul id="mobileServiceMenu" class="hidden flex-col bg-gray-50">
+        <li><a href="service.html" class="block px-6 py-2 hover:bg-orange-400 hover:text-white">Service</a></li>
+        <li><a href="service-details.html" class="block px-6 py-2 hover:bg-orange-400 hover:text-white">Service Details</a></li>
+      </ul>
+    </div>
+
+    <a href="project.html" class="block px-6 py-3 hover:text-orange-400">Project</a>
+    <a href="index.html" class="block px-6 py-3 hover:text-orange-400">Price</a>
+    <a href="contact.html" class="block px-6 py-3 hover:text-orange-400">Contact</a>
+
+  </nav>
+</header>
+    
+<section class="w-full py-16 mt-20" style="background-color: #F5F3F4;">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Contact</h1>
+        <p class="text-sm text-gray-600 mt-2">
+            <a href="index.html" class="hover:text-orange-500">Home</a>
+            <span class="mx-1">›</span>
+            <span class="font-medium text-gray-900">Contact</span>
+            
+        </p>
+    </div>
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
