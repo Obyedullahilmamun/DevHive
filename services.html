@@ -3,22 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact - DevHive</title>
+    <title>Services - DevHive</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <link href="https://fonts.cdnfonts.com/css/devil-breeze" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/bimbo" rel="stylesheet" />
   </head>
-
   <body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
-    <!-- Navbar -->
+    <!-- Navbar code -->
     <nav class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <div
         class="flex items-center justify-between py-4 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32"
       >
+        <!-- Logo -->
         <div class="flex items-center space-x-2">
           <img src="assets/img/logo/logo1.png" alt="Logo" class="w-24 h-18" />
         </div>
@@ -29,30 +31,43 @@
         >
           <!-- Home -->
           <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
+
           <!-- About -->
           <li><a href="about.html" class="hover:text-orange-400">About</a></li>
+
           <!-- Services -->
           <li>
             <a href="services.html" class="hover:text-orange-400">Services</a>
           </li>
+
           <!-- Projects -->
           <li>
             <a href="projects.html" class="hover:text-orange-400">Projects</a>
           </li>
+
           <!-- Contact -->
           <li>
             <a href="contact.html" class="hover:text-orange-400">Contact</a>
           </li>
         </ul>
 
+        <!-- Right Side: Toggle and Button -->
         <div class="flex items-center space-x-4">
+          <!-- Desktop Button -->
           <button
-            class="hidden md:inline-flex items-center px-4 py-2 rounded-lg shadow bg-orange-500 text-white hover:bg-black transition"
+            class="relative overflow-hidden hidden md:inline-flex items-center px-4 py-2 rounded-lg shadow bg-orange-500 text-white group"
           >
-            Get A Quote
-            <i class="fa-solid fa-arrow-right -rotate-[45deg] ml-2"></i>
+            <span class="relative z-10 flex items-center gap-2">
+              Get A Quote
+              <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+            </span>
+            <!-- Black overlay expanding from middle -->
+            <span
+              class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"
+            ></span>
           </button>
 
+          <!-- Mobile Menu Button -->
           <button
             id="menuBtn"
             class="md:hidden text-gray-800 focus:outline-none text-2xl"
@@ -107,310 +122,216 @@
             >Contact</a
           >
         </li>
+
+        <!-- Mobile Button -->
+        <li>
+          <button
+            class="relative w-full overflow-hidden bg-orange-500 text-white px-4 py-2 rounded-lg shadow font-semibold transition group"
+          >
+            <!-- Text above overlay -->
+            <span
+              class="relative z-10 flex items-center justify-center gap-2 transition-colors duration-500 group-hover:text-white"
+            >
+              Get A Quote
+              <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+            </span>
+
+            <!-- Expanding black overlay from middle -->
+            <span
+              class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"
+            ></span>
+          </button>
+        </li>
       </ul>
     </nav>
 
-    <!-- Page Header -->
-    <section class="w-full py-16 mt-20 bg-gray-100 text-center">
-      <div class="max-w-6xl mx-auto px-6">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Contact Us</h1>
+    <section class="w-full py-16 mt-20" style="background-color: #f5f3f4">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Our Services
+        </h1>
         <p class="text-sm text-gray-600 mt-2">
           <a href="index.html" class="hover:text-orange-500">Home</a>
           <span class="mx-1">›</span>
-          <span class="font-medium text-gray-900">Contact</span>
+          <span class="font-medium text-gray-900">Services</span>
         </p>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <!-- CONTACT SECTION -->
-    <section class="py-16 px-4 md:px-8">
-      <div class="max-w-7xl mx-auto">
-        <!-- Mobile Layout (visible on small screens only) -->
-        <div class="block lg:hidden space-y-10">
-          <!-- Contact Info Section -->
-          <div class="space-y-8">
-            <div>
-              <span
-                class="text-black bg-orange-100 tracking-wide px-3 py-1 inline-block"
-                >Contact Us</span
-              >
-              <h2 class="text-3xl font-bold mt-2">
-                Get in Touch - Let's Start the Conversation
-              </h2>
-              <p class="text-gray-600 mt-4">
-                We're here to help you with your questions and project needs.
-                Reach out anytime!
-              </p>
-            </div>
-
-            <!-- Contact Info Boxes -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div
-                class="flex items-center gap-4 bg-white shadow p-4 rounded-xl"
-              >
-                <img
-                  src="assets/img/icons/contact-icon1.png"
-                  alt="WhatsApp icon"
-                  class="w-10 h-10"
-                />
-                <div>
-                  <p class="text-gray-600">Message Us on WhatsApp</p>
-                  <h4 class="text-lg font-semibold">
-                    <a
-                      href="https://wa.me/8801551645597"
-                      target="_blank"
-                      class="text-black-600"
-                      >+(880) 1551-645597</a
-                    >
-                  </h4>
-                </div>
-              </div>
-
-              <div
-                class="flex items-center gap-4 bg-white shadow p-4 rounded-xl"
-              >
-                <img
-                  src="assets/img/icons/contact-icon2.png"
-                  alt="Mail icon"
-                  class="w-10 h-10"
-                />
-                <div>
-                  <p class="text-gray-600">Send us Mail</p>
-                  <h4 class="text-lg font-semibold">
-                    <a href="mailto:info@devhive.com" class="text-black-600"
-                      >info@devhive.com</a
-                    >
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Contact Form -->
-          <div class="bg-white shadow-lg p-8 rounded-2xl relative z-10">
-            <div class="mb-6">
-              <h3 class="text-2xl font-semibold">Send us a Message</h3>
-              <p class="text-gray-600 mt-2">
-                Fill free to send us a message. We will get back to you as soon
-                as possible.
-              </p>
-            </div>
-
-            <form id="contactForm" class="space-y-4">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-                  required
-                />
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-                  required
-                />
-              </div>
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-                required
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone"
-                class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-              />
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-              />
-              <textarea
-                name="message"
-                rows="4"
-                placeholder="Message"
-                class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-              ></textarea>
-
-              <button
-                class="relative overflow-hidden inline-flex items-center px-4 py-2 rounded-lg shadow bg-orange-500 text-white group"
-              >
-                <span class="relative z-10 flex items-center gap-2">
-                  Submit Now
-                  <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
-                </span>
-                <span
-                  class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"
-                ></span>
-              </button>
-            </form>
-          </div>
-
-          <!-- Map Section -->
-          <div
-            class="w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden shadow"
-          >
-            <iframe
-              class="w-full h-full border-0"
-              loading="lazy"
-              allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902377331802!2d90.39104917598627!3d23.750876288737895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b891b7d21a71%3A0x6a7b1111d2dfc407!2sDhaka!5e0!3m2!1sen!2sbd!4v1697727360000!5m2!1sen!2sbd"
-            >
-            </iframe>
-          </div>
+    <!-- Service Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-5xl mx-auto text-center px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Your Partner in People-Driven Growth
+        </h2>
+        <div class="mt-4">
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            At DevHive, we help you build the right team to drive your business
+            forward. We connect you with skilled professionals, provide expert
+            guidance, and ensure your workforce fuels growth and success. With
+            our deep market knowledge, finding the right talent is simple and
+            effective
+          </p>
         </div>
+      </div>
 
-        <!-- Desktop / Tablet Layout -->
+      <!-- Services Grid -->
+      <div
+        class="max-w-6xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4"
+      >
         <div
-          class="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-10 items-start"
+          class="relative group rounded-xl overflow-hidden shadow-md bg-white"
         >
-          <!-- Left -->
-          <div class="space-y-8">
-            <div>
-              <span
-                class="text-black bg-orange-100 tracking-wide px-3 py-1 inline-block"
-                >Contact Us</span
-              >
-              <h2 class="text-3xl font-bold mt-2">
-                Get in Touch - Let's Start the Conversation
-              </h2>
-              <p class="text-gray-600 mt-4">
-                We're here to help you with your questions and project needs.
-                Reach out anytime!
-              </p>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div
-                class="flex items-center gap-4 bg-white shadow p-4 rounded-xl"
-              >
-                <img
-                  src="assets/img/icons/contact-icon1.png"
-                  alt="Call icon"
-                  class="w-10 h-10"
-                />
-                <div>
-                  <p class="text-gray-600">Give us a Call</p>
-                  <h4 class="text-lg font-semibold">
-                    <a href="tel:+8801551645597" class="text-black-600"
-                      >+(880) 1551-645597</a
-                    >
-                  </h4>
-                </div>
-              </div>
-
-              <div
-                class="flex items-center gap-4 bg-white shadow p-4 rounded-xl"
-              >
-                <img
-                  src="assets/img/icons/contact-icon2.png"
-                  alt="Mail icon"
-                  class="w-10 h-10"
-                />
-                <div>
-                  <p class="text-gray-600">Send us Mail</p>
-                  <h4 class="text-lg font-semibold">
-                    <a href="mailto:info@devhive.com" class="text-black-600"
-                      >info@devhive.com</a
-                    >
-                  </h4>
-                </div>
-              </div>
-            </div>
-
-            <!-- Google Map -->
-            <div
-              class="w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden shadow"
-            >
-              <iframe
-                class="w-full h-full border-0"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902377331802!2d90.39104917598627!3d23.750876288737895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b891b7d21a71%3A0x6a7b1111d2dfc407!2sDhaka!5e0!3m2!1sen!2sbd!4v1697727360000!5m2!1sen!2sbd"
-              >
-              </iframe>
-            </div>
-          </div>
-
-          <!-- Right: Contact Form -->
-          <div class="bg-white shadow-lg p-8 rounded-2xl relative z-10">
-            <div class="mb-6">
-              <h3 class="text-2xl font-semibold">Send us a Message</h3>
-              <p class="text-gray-600 mt-2">
-                Fill out the form below, and we'll get back to you soon.
-              </p>
-            </div>
-
-            <form id="contactForm" class="space-y-4">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-                  required
-                />
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-                  required
-                />
-              </div>
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-                required
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone"
-                class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-              />
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-              />
-              <textarea
-                name="message"
-                rows="4"
-                placeholder="Message"
-                class="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-              ></textarea>
-
-              <button
-                class="relative overflow-hidden inline-flex items-center px-4 py-2 rounded-lg shadow bg-orange-500 text-white group"
-              >
-                <span class="relative z-10 flex items-center gap-2">
-                  Submit Now
-                  <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
-                </span>
-                <span
-                  class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"
-                ></span>
-              </button>
-            </form>
+          <!-- Image (full width, auto height) -->
+          <div class="relative">
+            <img
+              src="assets/img/service/service1-img1.png"
+              alt="Executive Search Services"
+              class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            />
           </div>
         </div>
+
+        <!-- Example Service Active -->
+        <div
+          class="relative group rounded-xl overflow-hidden shadow-md bg-white"
+        >
+          <div class="relative">
+            <img
+              src="assets/img/service/service1-img2.png"
+              alt="Executive Search Services"
+              class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div
+          class="relative group rounded-xl overflow-hidden shadow-md bg-white"
+        >
+          <div class="relative">
+            <img
+              src="assets/img/service/service1-img3.png"
+              alt="Executive Search Services"
+              class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div
+          class="relative group rounded-xl overflow-hidden shadow-md bg-white"
+        >
+          <!-- Image (full width, auto height) -->
+          <div class="relative">
+            <img
+              src="assets/img/service/service1-img4.png"
+              alt="Executive Search Services"
+              class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div
+          class="relative group rounded-xl overflow-hidden shadow-md bg-white"
+        >
+          <!-- Image (full width, auto height) -->
+          <div class="relative">
+            <img
+              src="assets/img/service/service1-img5.png"
+              alt="Executive Search Services"
+              class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div
+          class="relative group rounded-xl overflow-hidden shadow-md bg-white"
+        >
+          <div class="relative">
+            <img
+              src="assets/img/service/service1-img6.png"
+              alt="Executive Search Services"
+              class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div
+          class="relative group rounded-xl overflow-hidden shadow-md bg-white"
+        >
+          <div class="relative">
+            <img
+              src="assets/img/service/service1-img7.png"
+              alt="Executive Search Services"
+              class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div
+          class="relative group rounded-xl overflow-hidden shadow-md bg-white"
+        >
+          <div class="relative">
+            <img
+              src="assets/img/service/service1-img8.png"
+              alt="Executive Search Services"
+              class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div
+          class="relative group rounded-xl overflow-hidden shadow-md bg-white"
+        >
+          <div class="relative">
+            <img
+              src="assets/img/service/service1-img9.png"
+              alt="Executive Search Services"
+              class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="mt-12 flex justify-center">
+        <ul class="flex items-center gap-3 text-gray-600">
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 rounded-md hover:bg-orange-400 hover:text-white transition"
+            >
+              <i class="fa-solid fa-angle-left"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="px-3 py-2 rounded-md bg-orange-400 text-white"
+              >01</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 rounded-md hover:bg-orange-400 hover:text-white"
+              >02</a
+            >
+          </li>
+          <li>...</li>
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 rounded-md hover:bg-orange-400 hover:text-white"
+              >12</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 rounded-md hover:bg-orange-400 hover:text-white transition"
+            >
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
