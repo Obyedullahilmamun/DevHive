@@ -4,7 +4,7 @@
 
 ## Features:
 ```
-- Interactive **projects grid** with hover animations.  
+- Interactive projects grid with hover animations.  
 - Toggle (bee) switch for theme or options.  
 - Fully responsive layout using Tailwind CSS.  
 - Optimized for seamless user experience
