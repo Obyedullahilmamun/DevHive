@@ -2,7 +2,7 @@
 
 **DevHive** website is a modern, responsive web project showcasing web, app, and software development. 
 
-## Features:
+## Features
 ```
 - Interactive projects grid with hover animations.  
 - Toggle (bee) switch for theme or options.  
