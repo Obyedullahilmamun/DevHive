@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - DevHive</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link href="https://fonts.cdnfonts.com/css/devil-breeze" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/bimbo" rel="stylesheet" />
+
+    <style>
+      .project-two__box li {
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-two__box li.active .single-project-two__bg {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+
+      .single-project-two__bg {
+        width: 100%;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+    <!-- Navbar code -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+      <div
+        class="flex items-center justify-between py-4 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="assets/img/logo/logo1.png" alt="Logo" class="w-24 h-18" />
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul
+          class="hidden md:flex items-center space-x-8 text-gray-600 font-medium"
+        >
+          <!-- Home -->
+          <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
+
+          <!-- About -->
+          <li><a href="about.html" class="hover:text-orange-400">About</a></li>
+
+          <!-- Services -->
+          <li>
+            <a href="services.html" class="hover:text-orange-400">Services</a>
+          </li>
+
+          <!-- Projects -->
+          <li>
+            <a href="projects.html" class="hover:text-orange-400">Projects</a>
+          </li>
+
+          <!-- Contact -->
+          <li>
+            <a href="contact.html" class="hover:text-orange-400">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Right Side: Toggle and Button -->
+        <div class="flex items-center space-x-4">
+          <!-- Desktop Button -->
+          <button
+            class="relative overflow-hidden hidden md:inline-flex items-center px-4 py-2 rounded-lg shadow bg-orange-500 text-white group"
+          >
+            <span class="relative z-10 flex items-center gap-2">
+              Get A Quote
+              <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+            </span>
+            <!-- Black overlay expanding from middle -->
+            <span
+              class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"
+            ></span>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menuBtn"
+            class="md:hidden text-gray-800 focus:outline-none text-2xl"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <ul
+        id="mobileMenu"
+        class="md:hidden hidden flex-col space-y-4 bg-white px-6 pb-4"
+      >
+        <!-- Home -->
+        <li>
+          <a href="index.html" class="block text-gray-600 hover:text-orange-400"
+            >Home</a
+          >
+        </li>
+
+        <!-- About -->
+        <li>
+          <a href="about.html" class="block text-gray-600 hover:text-orange-400"
+            >About</a
+          >
+        </li>
+
+        <!-- Services -->
+        <li>
+          <a
+            href="services.html"
+            class="block text-gray-600 hover:text-orange-400"
+            >Services</a
+          >
+        </li>
+
+        <!-- Projects -->
+        <li>
+          <a
+            href="projects.html"
+            class="block text-gray-600 hover:text-orange-400"
+            >Projects</a
+          >
+        </li>
+
+        <!-- Contact -->
+        <li>
+          <a
+            href="contact.html"
+            class="block text-gray-600 hover:text-orange-400"
+            >Contact</a
+          >
+        </li>
+
+        <!-- Mobile Button -->
+        <li>
+          <button
+            class="relative w-full overflow-hidden bg-orange-500 text-white px-4 py-2 rounded-lg shadow font-semibold transition group"
+          >
+            <!-- Text above overlay -->
+            <span
+              class="relative z-10 flex items-center justify-center gap-2 transition-colors duration-500 group-hover:text-white"
+            >
+              Get A Quote
+              <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+            </span>
+
+            <!-- Expanding black overlay from middle -->
+            <span
+              class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"
+            ></span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="w-full py-16 mt-20" style="background-color: #f5f3f4">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Our Projects
+        </h1>
+        <p class="text-sm text-gray-600 mt-2">
+          <a href="index.html" class="hover:text-orange-500">Home</a>
+          <span class="mx-1">›</span>
+          <span class="font-medium text-gray-900">Projects</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section  -->
+    <section class="py-6 lg:py-20 bg-gray-50 text-gray-900">
+      <div class="mx-4 sm:mx-6 md:mx-32">
+        <!-- Section Header -->
+        <div class="text-center mb-12 max-w-2xl mx-auto">
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight pb-4"
+          >
+            Our Impact: Building Solutions, Driving Success
+          </h2>
+
+          <p class="mt-4 text-gray-600 text-sm sm:text-base">
+            Our portfolio shows how DevHive helps businesses grow with smart, tailored solutions. We don’t just deliver projects; we create websites, apps, and software that drive real results and help companies succeed. The examples below highlight how our work makes a difference.
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div
+          class="project-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+        >
+          <!-- Project Cards -->
+          <div
+            class="project-card overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out opacity-0 translate-y-6"
+          >
+            <img
+              src="assets/img/project/project1-img1.png"
+              alt="A business meeting in progress"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="project-card overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out opacity-0 translate-y-6"
+          >
+            <img
+              src="assets/img/project/project1-img2.png"
+              alt="A team collaborating on a project"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="project-card overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out opacity-0 translate-y-6"
+          >
+            <img
+              src="assets/img/project/project1-img3.png"
+              alt="A designer working on a laptop"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="project-card overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out opacity-0 translate-y-6"
+          >
+            <img
+              src="assets/img/project/project1-img4.png"
+              alt="Team brainstorming"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="project-card overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out opacity-0 translate-y-6"
+          >
+            <img
+              src="assets/img/project/project1-img5.png"
+              alt="Engineer presenting"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="project-card overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out opacity-0 translate-y-6"
+          >
+            <img
+              src="assets/img/project/project1-img6.png"
+              alt="Developers pair programming"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="project-card overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out opacity-0 translate-y-6"
+          >
+            <img
+              src="assets/img/project/project1-img7.png"
+              alt="Creative brainstorming"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="project-card overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out opacity-0 translate-y-6"
+          >
+            <img
+              src="assets/img/project/project1-img8.png"
+              alt="Corporate team strategy session"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="project-card overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out opacity-0 translate-y-6"
+          >
+            <img
+              src="assets/img/project/project1-img9.png"
+              alt="Project presentation"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Hover Effect -->
+        <style>
+          @media (min-width: 1024px) {
+            .project-grid {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+            }
+            .project-grid .project-card {
+              transition: transform 0.4s ease, flex 0.4s ease;
+            }
+            .project-grid .project-card:hover {
+              transform: scale(1.05); /* subtle pop */
+            }
+          }
+        </style>
+
+        <!-- Scroll Reveal Animation -->
+        <script>
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.remove("opacity-0", "translate-y-6");
+                  entry.target.classList.add("opacity-100", "translate-y-0");
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.2 }
+          );
+
+          document
+            .querySelectorAll(".project-card")
+            .forEach((card) => observer.observe(card));
+        </script>
+      </div>
+
+      <div class="mt-12 flex justify-center">
+        <ul class="flex items-center gap-3 text-gray-600">
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 rounded-md hover:bg-orange-400 hover:text-white transition"
+            >
+              <i class="fa-solid fa-angle-left"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="px-3 py-2 rounded-md bg-orange-400 text-white"
+              >01</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 rounded-md hover:bg-orange-400 hover:text-white"
+              >02</a
+            >
+          </li>
+          <li>...</li>
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 rounded-md hover:bg-orange-400 hover:text-white"
+              >12</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 rounded-md hover:bg-orange-400 hover:text-white transition"
+            >
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Ready to Power up your Savings and Reliability? -->
+    <section class="py-12 border-b border-gray-700 bg-[#081120]">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 px-2 text-white"
+      >
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">
+            Ready to Power up your <br class="hidden md:block" />
+            Savings and Reliability?
+          </h2>
+          <p class="mt-2">
+            DevHive delivers creative, reliable digital services to help your
+            <br />
+            business grow with fast, modern, and valuable websites.
+          </p>
+        </div>
+
+        <form class="flex w-full md:w-auto">
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="px-4 py-3 w-full md:w-80 rounded-l-lg text-black focus:outline-none"
+          />
+
+          <button
+            type="submit"
+            class="relative overflow-hidden bg-orange-500 text-white px-5 py-3 rounded-r-lg font-semibold transition group"
+          >
+            <!-- Text above overlay -->
+            <span
+              class="relative z-10 flex items-center gap-2 transition-colors duration-500 group-hover:text-white"
+            >
+              Subscribe Now
+              <i class="fa-solid fa-arrow-right -rotate-[45deg]"></i>
+            </span>
+
+            <!-- Expanding black overlay from middle -->
+            <span
+              class="absolute inset-0 bg-black scale-y-0 origin-center transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"
+            ></span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#081120] text-white">
+      <div class="max-w-6xl mx-auto px-2 py-10 grid md:grid-cols-4 gap-12">
+        <!-- Logo and About -->
+        <div>
+          <div class="flex items-center gap-3">
+            <img
+              src="assets/img/logo/logo1.png"
+              alt="logo"
+              class="w-40 sm:w-54 h-auto"
+            />
+          </div>
+          <p class="mt-4 text-sm leading-relaxed text-gray-300">
+            DevHive is a creative web and IT service company providing modern,
+            responsive, and user-friendly digital solutions.
+          </p>
+
+          <div class="flex gap-2 mt-4">
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400"
+            >
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-400"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-white mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li>
+              <a
+                href="#"
+                class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3"
+              >
+                <!-- Left Accent Bar -->
+                <span
+                  class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"
+                ></span>
+                Contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3"
+              >
+                <span
+                  class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"
+                ></span>
+                Support
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3"
+              >
+                <span
+                  class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"
+                ></span>
+                Team
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3"
+              >
+                <span
+                  class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"
+                ></span>
+                Careers
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Explore -->
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-white mb-4">Explore</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li>
+              <a
+                href="#"
+                class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3"
+              >
+                <!-- Left Accent Bar -->
+                <span
+                  class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"
+                ></span>
+                Projects
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3"
+              >
+                <span
+                  class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"
+                ></span>
+                Case Studies
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3"
+              >
+                <span
+                  class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"
+                ></span>
+                Blog
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group relative block pl-0 text-gray-300 transition-all duration-300 hover:text-orange-400 hover:pl-3"
+              >
+                <span
+                  class="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-0 bg-orange-400 opacity-0 transition-all duration-300 group-hover:w-1 group-hover:opacity-100"
+                ></span>
+                Community
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="space-y-2">
+          <h3 class="font-bold mb-4">Contact Us</h3>
+          <ul class="space-y-3 text-gray-300">
+            <li
+              class="flex items-center gap-3 group hover:text-orange-400 transition-colors cursor-pointer"
+            >
+              <span
+                class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-700 group-hover:bg-orange-400 transition-colors"
+              >
+                <img
+                  src="assets/img/icons/footer-icon1.png"
+                  alt=""
+                  class="w-5 h-5"
+                />
+              </span>
+              +(880) 1551-645597
+            </li>
+
+            <li
+              class="flex items-center gap-3 group hover:text-orange-400 transition-colors cursor-pointer"
+            >
+              <span
+                class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-700 group-hover:bg-orange-400 transition-colors"
+              >
+                <img
+                  src="assets/img/icons/footer-icon2.png"
+                  alt=""
+                  class="w-5 h-5"
+                />
+              </span>
+              info@devhive.com
+            </li>
+
+            <li
+              class="flex items-center gap-3 group hover:text-orange-400 transition-colors cursor-pointer"
+            >
+              <span
+                class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-700 group-hover:bg-orange-400 transition-colors"
+              >
+                <img
+                  src="assets/img/icons/footer-icon3.png"
+                  alt=""
+                  class="w-5 h-5"
+                />
+              </span>
+              Dhaka, Bangladesh
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div
+        class="border-t border-gray-700 py-4 text-center text-sm text-gray-400 px-6 lg:px-12"
+      >
+        © 2025 DevHive. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
