@@ -5,7 +5,7 @@
 ## Features
 ```
 - Interactive projects grid with hover animations.  
-- Toggle (bee) switch for theme or options.  
+- Toggle (bee) switch to control the visibility of the 3D bee model. 
 - Fully responsive layout using Tailwind CSS.  
 - Optimized for seamless user experience.
 ```
