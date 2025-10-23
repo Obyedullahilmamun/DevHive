@@ -291,3 +291,13 @@ document.addEventListener("DOMContentLoaded", function () {
     form.reset();
   });
 });
+<<<<<<< HEAD
+=======
+
+// Mobile menu toggle
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+>>>>>>> e4aeaeb67d6d7d3bd85dc9220eefc031bcabf5e6
