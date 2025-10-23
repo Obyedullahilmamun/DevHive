@@ -1,6 +1,6 @@
 # DevHive
 
-**DevHive website** is a modern, responsive web project showcasing web, app, and software development. 
+**DevHive** website is a modern, responsive web project showcasing web, app, and software development. 
 
 ## Features:
 ```
