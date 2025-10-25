@@ -4,9 +4,9 @@
 
 ## Features
 ```
-- Interactive projects grid with hover animations.  
-- Toggle (bee) switch to control the visibility of the 3D bee model. 
-- Fully responsive layout using Tailwind CSS.  
-- Optimized for seamless user experience.
+- Interactive projects grid with hover animations 
+- Toggle (bee) switch to control the visibility of the 3D bee model 
+- Fully responsive layout with Tailwind CSS  
+- Optimized for smooth and seamless user experience
 ```
 The website demonstrates building dynamic, modern and responsive web designs with JavaScript and Tailwind CSS.
